@@ -7,19 +7,19 @@ import java.io.*;
 public class FileInputOutputStreamExample {
     public static void main(String... args) {
         try{
-            FileInputStream inputStream = new FileInputStream("C:\\Users\\vikra\\IdeaProjects\\java-io-concepts-2\\byte-streaming\\src\\input.txt");
+            InputStream fileInputStream = new FileInputStream("C:\\Users\\vikra\\IdeaProjects\\java-io-concepts-2\\byte-streaming\\src\\input.txt");
 
-            FileOutputStream outputStream = new FileOutputStream("C:\\Users\\vikra\\IdeaProjects\\java-io-concepts-2\\byte-streaming\\src\\output.txt");
+            OutputStream fileOutputStream = new FileOutputStream("C:\\Users\\vikra\\IdeaProjects\\java-io-concepts-2\\byte-streaming\\src\\output.txt");
 
-            System.out.println(inputStream.available());
+            System.out.println(fileInputStream.available());
 
 
-            byte[] bytes = inputStream.readAllBytes();//read all bytes from input file
-            outputStream.write(bytes);//write all bytes to the output file
+            byte[] bytes = fileInputStream.readAllBytes();//read all bytes from input file
+            fileOutputStream.write(bytes);//write all bytes to the output file
 
-            System.out.println(outputStream);
-            inputStream.close();
-            outputStream.close();
+            System.out.println(fileOutputStream);
+            fileInputStream.close();
+            fileOutputStream.close();
 
         } catch (IOException fileNotFoundException){
             fileNotFoundException.printStackTrace();

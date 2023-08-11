@@ -13,6 +13,7 @@ import java.util.Arrays;
  * This class is used to write array read from input stream
  */
 
+// byte array -> input stream -> output stream -> byte array
 public class ByteArrayInputOutputStreamExample {
     public static void main(String[] args) {
         try{
